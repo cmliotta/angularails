@@ -1,4 +1,4 @@
-var routerApp = angular.module.('routerApp', ['ui.router']);
+var routerApp = angular.module('routerApp', ['ui.router']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider){
 
@@ -21,7 +21,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider){
       })
 
       .state('home.paragraph', {
-        url, '/paragraph',
+        url: '/paragraph',
         template: 'I could sure use a drink'
       })
 
@@ -52,7 +52,7 @@ routerApp.controller('scotchController', function($scope){
     },
     {
       name: "Chivas Regal",
-      price 10000
+      price: 10000
     },
     {
       name: 'Glenfiddich 1937',
