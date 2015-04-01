@@ -12,6 +12,14 @@
 
     <hr />
 
+    <div class="alert alert-danger" ng-show="errorMessage">
+      <strong>
+        <i class="icon-warning-sign"></i> Error!
+      </strong> {{ errorMessage }}
+    </div>
+
+    <i class="icon-refresh icon-spin" ng-show="searching"></i>
+
     <ul class="list-group">
       <li class="list-group-item" ng-repeat="repo in repos">
         <h4 class="list-group-item-heading"> {{repo.full_name}}</h4>
