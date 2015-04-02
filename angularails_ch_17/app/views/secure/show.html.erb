@@ -1,0 +1,36 @@
+<div class="row" ng-app="AngulaRails" ng-controller="SessionsController">
+  <div class="login" ng-show="!authorized()">
+    <div class="alert warning">
+      Please login to access secret
+    </div>
+    <form ng-submit="signIn()">
+      <div class="alert alert-error" id="errors" ng-show="authErrors">
+        {{authErrors}}
+      </div>
+    <div class="control-group">
+      <%= label_tag :email %>
+      <div class="controls">
+        <%= email_field_tag :email, "", autofocus: true, "ng-model"=>"email" %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= label_tag :password %>
+      <div class="controls">
+        <%= password_field_tag :password, "", "ng-model"=>"password" %>
+      </div>
+    </div>
+    <%= submit_tag "Sign In", class: "btn btn-large btn-primary" %>
+    </form>
+  </div>
+
+
+  <div class="secure" ng-show="authorized()">
+    <div class="pull-right">
+      <button class="btn" ng-click="signOut()">Sign Out</button>
+    </div>
+    <dl>
+      <dt>My luggage</dt>
+      <dd>1-2-3-4-5</dd>
+    </dl>
+  </div>
+</div>
