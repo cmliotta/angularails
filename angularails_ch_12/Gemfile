@@ -24,3 +24,8 @@ gem 'font-awesome-rails'
 # Paging
 gem 'kaminari'
 
+gem 'rspec-rails'
+
+gem 'jasmine-rails'
+
+gem 'capybara'

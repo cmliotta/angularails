@@ -14,26 +14,20 @@ class GamesController < ApplicationController
     end
   end
 
-  # GET /games/1
-  # GET /games/1.json
   def show
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.json { render json: @game }
     end
   end
 
-  # GET /games/new
   def new
     @game = Game.new
   end
 
-  # GET /games/1/edit
   def edit
   end
 
-  # POST /games
-  # POST /games.json
   def create
     @game = Game.new(game_params)
 
