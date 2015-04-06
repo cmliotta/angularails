@@ -24,3 +24,14 @@ gem 'font-awesome-rails'
 # Paging
 gem 'kaminari'
 
+group :test do
+
+  gem 'rspec-rails'
+
+  gem 'jasmine-rails'
+
+  gem 'capybara'
+
+  gem 'selenium-webdriver', '~> 2.45.0'
+end
+
